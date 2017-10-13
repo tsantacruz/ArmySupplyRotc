@@ -1,0 +1,23 @@
+body {
+    background-color: #8FBC8F;
+    text-align: center;
+    color: black;
+}
+table {
+  border-collapse: separate;
+  border-spacing: 4px;
+    width:70%; 
+    margin-left:15%; 
+    margin-right:15%;
+
+}
+table,
+th,
+td {
+  border: 1px solid #000000;
+}
+th,
+td {
+  padding: 10px 15px;
+}
+
