@@ -1,2 +1,2 @@
 # ArmySupplyRotc
-A way to sort a database of entries.
+A way for Seton Hall ROTC to keep track of their equipment.
