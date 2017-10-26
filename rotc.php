@@ -1,50 +1,43 @@
 <html>
 <head><title>supply</title></head>
 <link rel="stylesheet" href="rotc.css">
-<h1>Rotc Supply Database</h1>
+<h1>Seton Hall Rotc Supply Database</h1>
 <body>  
 <form method="post" action="">
-    <input type="text" name="something" value=""> Search by name</input>
-    <input type="submit" name="submit" />
-  </form>
-
+    Equipment Search: 
+    <input type="text" name="something" value="" /> 
+    <input  type="submit" name="submitavailable" value = "available"/>
+    <input type="submit" name="submitnotavailable" value = "unavailable"/>
+    </form>
+    
+<form method="post" action="main_login.php">
+    <input type="submit" name="Login" value = "Login"/>
+    </form>
+<form method="post" action="request_form.php">
+    <input type="submit" name="Request" value = "Check out Equipment"/>
+    </form>
 
 <?php
-$user = 'root';
-$password = 'root';
-$db = 'rotc_army_supply';
-$host = 'localhost';
-$port = 8889;
-$name=$_POST['something'];
-$availability = $_POST['Availability'];
-
-
-$link = mysqli_init();
-$conn = mysqli_real_connect(
-   $link, 
-   $host, 
-   $user, 
-   $password, 
-   $db,
-   $port
-);
-$db_selected = mysqli_select_db(
-   $db, 
-   $link
-);
+require("databaseconnect.php");
 
 if($db->connect_errno){
     printf("Connect failed: %s\n", $db->connect_error);
     exit();
 }
 
+$name=$_POST['something'];
+$name = preg_replace('/\s+/', '', $name);
 
-$query = "SELECT * FROM rotcarmy WHERE rotcarmy.equipment_name LIKE '%".$name."%' ORDER BY rotcarmy.equipment_id";
+$query = "SELECT * FROM rotcarmy WHERE rotcarmy.equipment_name LIKE '%".$name."%' AND rotcarmy.availability= 'available' ORDER BY rotcarmy.equipment_id";
 
+$queryTwo = "SELECT * FROM rotcarmy WHERE rotcarmy.equipment_name LIKE '%".$name."%' AND rotcarmy.availability= 'unavailable' ORDER BY rotcarmy.equipment_id";
+    
 $result = mysqli_query($link, $query) 
     or trigger_error($db->error);
 
-    if(isset($_POST['submit'])) {
+$resultTwo = mysqli_query($link, $queryTwo) 
+    or trigger_error($db->error);
+    if(isset($_POST['submitavailable'])) {
        // echo 'You entered ', htmlspecialchars($_POST['somethin']);
 //var_dump($result);    ?>
 <TABLE>
@@ -56,6 +49,27 @@ $result = mysqli_query($link, $query)
 <?php
 $array = array('equipment_id', 'equipment_name', 'availability');
         while($row = mysqli_fetch_array($result)) {
+
+    echo "<TR>";
+    foreach($array as $field) { 
+        echo "<TD>".$row[$field]."</TD>";
+    }
+    echo "</TR>";
+}
+}
+    
+     if(isset($_POST['submitnotavailable'])) {
+       // echo 'You entered ', htmlspecialchars($_POST['somethin']);
+//var_dump($result);    ?>
+<TABLE>
+<TR>
+<TH>ID</TH>
+<TH>Name</TH>
+<TH>Availability</TH>
+</TR>
+<?php
+$array = array('equipment_id', 'equipment_name', 'availability');
+        while($row = mysqli_fetch_array($resultTwo)) {
 
     echo "<TR>";
     foreach($array as $field) { 
