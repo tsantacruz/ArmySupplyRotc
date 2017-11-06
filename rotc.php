@@ -1,20 +1,19 @@
 <html>
 <head><title>supply</title></head>
 <link rel="stylesheet" href="rotc.css">
-<h1>Seton Hall Rotc Supply Database</h1>
+<h1>Seton Hall Army ROTC</h1>
 <body>  
 <form method="post" action="">
     Equipment Search: 
     <input type="text" name="something" value="" /> 
-    <input  type="submit" name="submitavailable" value = "available"/>
-    <input type="submit" name="submitnotavailable" value = "unavailable"/>
+    <input  type="submit" name="submitavailable" value = "Search"/>
     </form>
     
 <form method="post" action="main_login.php">
-    <input type="submit" name="Login" value = "Login"/>
+    <input type="submit" name="Login" value = "Admin"/>
     </form>
 <form method="post" action="request_form.php">
-    <input type="submit" name="Request" value = "Check out Equipment"/>
+    <input type="submit" name="Request" value = "Request"/>
     </form>
 
 <?php
@@ -28,15 +27,15 @@ if($db->connect_errno){
 $name=$_POST['something'];
 $name = preg_replace('/\s+/', '', $name);
 
-$query = "SELECT * FROM rotcarmy WHERE rotcarmy.equipment_name LIKE '%".$name."%' AND rotcarmy.availability= 'available' ORDER BY rotcarmy.equipment_id";
+$query = "SELECT * FROM rotcarmy WHERE rotcarmy.equipment_name LIKE '%".$name."%'";
 
-$queryTwo = "SELECT * FROM rotcarmy WHERE rotcarmy.equipment_name LIKE '%".$name."%' AND rotcarmy.availability= 'unavailable' ORDER BY rotcarmy.equipment_id";
+//$queryTwo = "SELECT * FROM rotcarmy WHERE rotcarmy.equipment_name LIKE '%".$name."%' AND rotcarmy.availability= 'unavailable' ORDER BY rotcarmy.equipment_id";
     
 $result = mysqli_query($link, $query) 
     or trigger_error($db->error);
 
-$resultTwo = mysqli_query($link, $queryTwo) 
-    or trigger_error($db->error);
+//$resultTwo = mysqli_query($link, $queryTwo) 
+  //  or trigger_error($db->error);
     if(isset($_POST['submitavailable'])) {
        // echo 'You entered ', htmlspecialchars($_POST['somethin']);
 //var_dump($result);    ?>
