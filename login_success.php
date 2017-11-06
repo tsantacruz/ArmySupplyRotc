@@ -6,11 +6,11 @@
         <button type="submit" >Log Out</button>
     </form>
 <header>Welcome Admin</header>
-    <p>Enter ID to Change Equipment Status</p>
+    <p>Enter Equipment ID to Change Equipment Availability</p>
     <form method="post" action="">
     <input type="text" name="something" value="" /> 
-    <input  type="submit" name="changetoavailable" value = "make available"/>
-    <input type="submit" name="changetounavailable" value = "make unavailable"/>
+    <input  type="submit" name="changetoavailable" value = "add to available"/>
+    <input type="submit" name="changetounavailable" value = "subtract from available"/>
     </form>
 <?php
 session_start();
@@ -32,7 +32,7 @@ $equipmentID = preg_replace('/\s+/', '', $equipmentID);
 
         if(isset($_POST['changetoavailable'])) {
             $query = "UPDATE rotcarmy
-            SET availability='available'
+            SET availability= availability + 1
             WHERE equipment_id = '$equipmentID';";
             
             $result = mysqli_query($link, $query) 
@@ -46,7 +46,7 @@ $equipmentID = preg_replace('/\s+/', '', $equipmentID);
             }
         if(isset($_POST['changetounavailable'])) {
             $query = "UPDATE rotcarmy
-            SET availability='unavailable'
+            SET availability= availability - 1
             WHERE equipment_id = '$equipmentID';";
             $result = mysqli_query($link, $query) 
         or trigger_error($db->error);
