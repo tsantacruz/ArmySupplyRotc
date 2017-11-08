@@ -13,7 +13,7 @@
     <input type="submit" name="Login" value = "Admin"/>
     </form>
 <form method="post" action="request_form.php">
-    <input type="submit" name="Request" value = "Request"/>
+    <input type="submit" name="Request" value = "Request" />
     </form>
 
 <?php
@@ -57,26 +57,6 @@ $array = array('equipment_id', 'equipment_name', 'availability');
 }
 }
     
-     if(isset($_POST['submitnotavailable'])) {
-       // echo 'You entered ', htmlspecialchars($_POST['somethin']);
-//var_dump($result);    ?>
-<TABLE>
-<TR>
-<TH>ID</TH>
-<TH>Name</TH>
-<TH>Availability</TH>
-</TR>
-<?php
-$array = array('equipment_id', 'equipment_name', 'availability');
-        while($row = mysqli_fetch_array($resultTwo)) {
-
-    echo "<TR>";
-    foreach($array as $field) { 
-        echo "<TD>".$row[$field]."</TD>";
-    }
-    echo "</TR>";
-}
-}
 $db->close();
  ?> 
 </TABLE>

@@ -4,21 +4,22 @@
     <form method="post" action="rotc.php">
         <button type="submit" >Home</button>
     </form>
-<form>
-  First name:<br>
-  <input type="text" name="firstname"><br>
-  Last name:<br>
-  <input type="text" name="lastname"><br>
-  Email Address:<br>
-  <input type="text" name= "email"><br>
-  Equipment ID:<br>
-  <input type="text" name= "equipment id"><br>
-    Message:<br>
-    <textarea rows="5" name="message" cols="30"></textarea><br>
-</form>
 <form method="post" action="">
-    <button type="submit" name = "submitrequest">Send Request</button>
-</form>    
+  First name:<br>
+  <input type="text" name="firstname" value=""><br>
+  Last name:<br>
+  <input type="text" name="lastname" value=""><br>
+  Email Address:<br>
+  <input type="text" name= "email" value=""><br>
+  Equipment ID:<br>
+  <input type="text" name= "equipmentid" value=""><br>
+    MS Level<br>
+  <input type="text" name= "mslevel" value=""><br>
+    Message (Optional):<br>
+<textarea rows="5" name="message" cols="30" value=""></textarea><br>
+<input type="submit" name = "submitrequest" value="Send Request"/> 
+</form>
+   
     
 
 <?php
@@ -26,27 +27,29 @@
 //ini_set('display_errors', 'On');
 //set_error_handler("var_dump");
 require("databaseconnect.php");
-    
-if(isset($_POST['submitrequest'])){
-    $to = "jbenedict72696@gmail.com"; // this is your Email address
-    $from = $_POST['email']; // this is the sender's Email address
+    $email = $_POST['email']; // this is the sender's Email address
     $firstname = $_POST['firstname'];
     $lastname = $_POST['lastname'];
-    $subject = "Equipment Request";
-    $subject2 = "Copy of your Equipment Request";
-    $message = $firstname . " " . $lastname . " wrote the following:" . "\n\n" . $_POST['message'];
-    $message2 = "Here is a copy of your message " . $firstname . "\n\n" . $_POST['message'];
-
-    $headers = "From:" . $from;
-    $headers2 = "From:" . $to;
-    mail($to,$subject,$message,$headers);
-    mail($from,$subject2,$message2,$headers2); // sends a copy of the message to the sender
-    if(mail){
-    echo "Mail Sent. Thank you " . $firstname . ", we will contact you shortly.";
-    }
+    $message = $_POST['message'];
+    $equipmentID= $_POST['equipmentid'];
+    $msLevel= $_POST['mslevel'];
+    $requestid=1;
+    
+    
+    
+if(isset($_POST['submitrequest'])){
+     $query = "INSERT INTO `requests`(`firstname`, `lastname`, `email`, `equipment`, `mslevel`, `message(optional)`, `requestid`) VALUES ('$firstname','$lastname','$email','$equipmentID','$msLevel','$message','$requestid')";
+    $result = mysqli_query($link, $query) 
+    or trigger_error($db->error);
+       if ($result) {
+    echo "Your request has been submitted!";
+} else {
+    echo "Error updating record: " . mysqli_error($conn);
+}
+            }
     // You can also use header('Location: thank_you.php'); to redirect to another page.
     // You cannot use header and echo together. It's one or the other.
-    }
+    
 
 ?>
         

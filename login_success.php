@@ -9,8 +9,9 @@
     <p>Enter Equipment ID to Change Equipment Availability</p>
     <form method="post" action="">
     <input type="text" name="something" value="" /> 
-    <input  type="submit" name="changetoavailable" value = "add to available"/>
-    <input type="submit" name="changetounavailable" value = "subtract from available"/>
+    <input  type="submit" name="changetoavailable" value = "Increase quantity"/>
+    <input type="submit" name="changetounavailable" value = "Decrease quantity"/>
+    <input type="submit" name="refresh" value="refresh equipment table"/>
     </form>
 <?php
 session_start();
@@ -27,9 +28,29 @@ exit();
 
 $equipmentID = $_POST['something']; 
 $equipmentID = preg_replace('/\s+/', '', $equipmentID);
+$showtablequery="SELECT * FROM rotcarmy";
+$showtableresult= mysqli_query($link, $showtablequery) 
+    or trigger_error($db->error); ?>
+    <TABLE>
+<TR>
+<TH>ID</TH>
+<TH>Name</TH>
+<TH>Availability</TH>
+</TR>
+<?php
+$array = array('equipment_id', 'equipment_name', 'availability');
+        while($row = mysqli_fetch_array($showtableresult)) {
+
+    echo "<TR>";
+    foreach($array as $field) { 
+        echo "<TD>".$row[$field]."</TD>";
+    }
+    echo "</TR>";
+} ?>
+        </TABLE>
 
   
-
+<?php
         if(isset($_POST['changetoavailable'])) {
             $query = "UPDATE rotcarmy
             SET availability= availability + 1
@@ -57,6 +78,27 @@ $equipmentID = preg_replace('/\s+/', '', $equipmentID);
     echo "Error updating record: " . mysqli_error($conn);
 }
             }
+            if(isset($_POST['refresh'])) { ?>
+                 <TABLE>
+<TR>
+<TH>ID</TH>
+<TH>Name</TH>
+<TH>Availability</TH>
+</TR>
+<?php
+$array = array('equipment_id', 'equipment_name', 'availability');
+        while($row = mysqli_fetch_array($showtableresult)) {
+
+    echo "<TR>";
+    foreach($array as $field) { 
+        echo "<TD>".$row[$field]."</TD>";
+    }
+    echo "</TR>";
+} ?>
+        </TABLE>
+<?php
+            }
+
     
 $db->close();
  ?> 
