@@ -13,7 +13,7 @@
     <input type="submit" name="Login" value = "Admin"/>
     </form>
 <form method="post" action="request_form.php">
-    <input type="submit" name="Request" value = "Request" />
+    <input type="submit" name="Request" value = "Request Equipment" />
     </form>
 
 <?php
@@ -34,8 +34,7 @@ $query = "SELECT * FROM rotcarmy WHERE rotcarmy.equipment_name LIKE '%".$name."%
 $result = mysqli_query($link, $query) 
     or trigger_error($db->error);
 
-//$resultTwo = mysqli_query($link, $queryTwo) 
-  //  or trigger_error($db->error);
+
     if(isset($_POST['submitavailable'])) {
        // echo 'You entered ', htmlspecialchars($_POST['somethin']);
 //var_dump($result);    ?>

@@ -33,12 +33,11 @@ require("databaseconnect.php");
     $message = $_POST['message'];
     $equipmentID= $_POST['equipmentid'];
     $msLevel= $_POST['mslevel'];
-    $requestid=1;
     
     
     
 if(isset($_POST['submitrequest'])){
-     $query = "INSERT INTO `requests`(`firstname`, `lastname`, `email`, `equipment`, `mslevel`, `message(optional)`, `requestid`) VALUES ('$firstname','$lastname','$email','$equipmentID','$msLevel','$message','$requestid')";
+     $query = "INSERT INTO `requests`(`firstname`, `lastname`, `email`, `equipment`, `mslevel`, `message(optional)`) VALUES ('$firstname','$lastname','$email','$equipmentID','$msLevel','$message')";
     $result = mysqli_query($link, $query) 
     or trigger_error($db->error);
        if ($result) {

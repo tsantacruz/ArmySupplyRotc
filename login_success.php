@@ -5,6 +5,9 @@
         <button type="submit" >Home</button>
         <button type="submit" >Log Out</button>
     </form>
+    <form method="post" action="requests.php">
+        <button type="submit" >See Pending Requests</button>
+    </form>
 <header>Welcome Admin</header>
     <p>Enter Equipment ID to Change Equipment Availability</p>
     <form method="post" action="">
