@@ -2,23 +2,23 @@
 <link rel="stylesheet" href="rotc.css">
 <html>
     <body>
-        <table width="300" border="0" align="center" cellpadding="0" cellspacing="1" bgcolor="#8FBC8F">
+        <table width="300" border="0" align="center" cellpadding="0" cellspacing="1" bgcolor="#a0a0c5">
         <tr>
         <form name="form1" method="post" action="checklogin.php">
         <td>
-        <table width="100%" border="0" cellpadding="3" cellspacing="1" bgcolor="#8FBC8F">
+        <table width="100%" border="0" cellpadding="3" cellspacing="1" bgcolor="#a0a0c5">
         <tr>
         <td colspan="3"><strong>Admin Login </strong></td>
         </tr>
         <tr>
         <td width="78">Username</td>
         <td width="6">:</td>
-        <td width="294"><input name="myusername" type="text" id="myusername"></td>
+        <td width="294"><input name="myusername" type="text" id="myusername" placeholder="Your username.."></td>
         </tr>
         <tr>
         <td>Password</td>
         <td>:</td>
-        <td><input name="mypassword" type="password" id="mypassword"></td>
+        <td><input name="mypassword" type="password" id="mypassword" placeholder="Your password.."></td>
         </tr>
         <tr>
         <td>&nbsp;</td>

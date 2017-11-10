@@ -1,20 +1,21 @@
 <html>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <head><title>supply</title></head>
 <link rel="stylesheet" href="rotc.css">
-<h1>Seton Hall Army ROTC</h1>
-<body>  
-<form method="post" action="">
-    Equipment Search: 
-    <input type="text" name="something" value="" /> 
-    <input  type="submit" name="submitavailable" value = "Search"/>
-    </form>
-    
-<form method="post" action="main_login.php">
+    <form method="post" action="main_login.php">
     <input type="submit" name="Login" value = "Admin"/>
     </form>
 <form method="post" action="request_form.php">
     <input type="submit" name="Request" value = "Request Equipment" />
     </form>
+<h1>Seton Hall Army ROTC</h1>
+<body>  
+<form method="post" action="">
+    Equipment Search: 
+    <input type="text" name="something" value="" placeholder="EquipmentID.."/> 
+    <input  type="submit" name="submitavailable" value = "Search"/>
+    </form>
+
 
 <?php
 require("databaseconnect.php");

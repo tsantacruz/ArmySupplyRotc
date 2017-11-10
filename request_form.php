@@ -6,15 +6,15 @@
     </form>
 <form method="post" action="">
   First name:<br>
-  <input type="text" name="firstname" value=""><br>
+  <input type="text" name="firstname" value=""placeholder="First Name.."><br>
   Last name:<br>
-  <input type="text" name="lastname" value=""><br>
+  <input type="text" name="lastname" value="" placeholder="Last name.."><br>
   Email Address:<br>
-  <input type="text" name= "email" value=""><br>
+  <input type="text" name= "email" value="" placeholder="Email.."><br>
   Equipment ID:<br>
-  <input type="text" name= "equipmentid" value=""><br>
+  <input type="text" name= "equipmentid" value="" placeholder="Equipment ID.."><br>
     MS Level<br>
-  <input type="text" name= "mslevel" value=""><br>
+  <input type="text" name= "mslevel" value="" placeholder="MS Level.."><br>
     Message (Optional):<br>
 <textarea rows="5" name="message" cols="30" value=""></textarea><br>
 <input type="submit" name = "submitrequest" value="Send Request"/> 

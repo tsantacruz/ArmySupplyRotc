@@ -10,12 +10,17 @@
     </form>
 <header>Welcome Admin</header>
     <p>Enter Equipment ID to Change Equipment Availability</p>
+    
     <form method="post" action="">
     <input type="text" name="something" value="" /> 
-    <input  type="submit" name="changetoavailable" value = "Increase quantity"/>
-    <input type="submit" name="changetounavailable" value = "Decrease quantity"/>
-    <input type="submit" name="refresh" value="refresh equipment table"/>
+    <input  type="submit" name="changetoavailable" value="Increase Quantity"/>
+    <input type="submit" name="changetounavailable" value="Decrease Quantity"/>
     </form>
+    
+    <form method="post" action="">
+        <input type="submit" name="refresh" value="refresh equipment table"/>
+    </form>
+    
 <?php
 session_start();
 require("databaseconnect.php");
@@ -81,26 +86,7 @@ $array = array('equipment_id', 'equipment_name', 'availability');
     echo "Error updating record: " . mysqli_error($conn);
 }
             }
-            if(isset($_POST['refresh'])) { ?>
-                 <TABLE>
-<TR>
-<TH>ID</TH>
-<TH>Name</TH>
-<TH>Availability</TH>
-</TR>
-<?php
-$array = array('equipment_id', 'equipment_name', 'availability');
-        while($row = mysqli_fetch_array($showtableresult)) {
-
-    echo "<TR>";
-    foreach($array as $field) { 
-        echo "<TD>".$row[$field]."</TD>";
-    }
-    echo "</TR>";
-} ?>
-        </TABLE>
-<?php
-            }
+     
 
     
 $db->close();

@@ -1,7 +1,11 @@
 body {
-    background-color: #8FBC8F;
+    background-color: #a0a0c5;
     text-align: center;
     color: black;
+    font-family: Baskerville, "Baskerville Old Face", "Goudy Old Style", Garamond, "Times New Roman", serif;
+}
+header {
+    font-size: 230%;
 }
 table {
   border-collapse: separate;
@@ -11,6 +15,8 @@ table {
     margin-right:15%;
 
 }
+
+
 table,
 th,
 td {
@@ -19,5 +25,32 @@ td {
 th,
 td {
   padding: 10px 15px;
+}
+input[type=text] {
+    padding:5px; 
+    border:2px solid #ccc; 
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+}
+
+input[type=text]:focus {
+    border-color:#333;
+}
+
+input[type=submit] {
+    padding:5px 15px; 
+    background:#c2c2d6; 
+    border:0 none;
+    cursor:pointer;
+    -webkit-border-radius: 5px;
+    border-radius: 5px; 
+}
+button[type=submit] {
+    padding:5px 15px; 
+    background:#c2c2d6; 
+    border:0 none;
+    cursor:pointer;
+    -webkit-border-radius: 5px;
+    border-radius: 5px; 
 }
 
