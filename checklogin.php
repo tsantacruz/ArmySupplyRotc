@@ -1,5 +1,5 @@
+<link rel="stylesheet" href= "css/bootstrap.min.css">
 <link rel="stylesheet" href="rotc.css">
-
 <?php
 session_start();
 require("databaseconnect.php");
@@ -35,7 +35,7 @@ if (($usrUsername === $myusername) && ($usrPassword === $mypassword)) {
     echo "<script type='text/javascript'> document.location = 'login_success.php'; </script>";
     exit();
 } else {
-    //echo "There were troubles logging you in.";
+    echo "Your Username or Password is incorrect";
 }
 
 //if($count==1){

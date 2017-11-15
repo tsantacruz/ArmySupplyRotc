@@ -1,3 +1,4 @@
+<link rel="stylesheet" href= "css/bootstrap.min.css">
 <link rel="stylesheet" href="rotc.css">
 <html>
 <body>

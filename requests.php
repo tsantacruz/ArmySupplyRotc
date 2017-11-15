@@ -1,21 +1,21 @@
 <html>
 <head><title>supply</title></head>
+    <link rel="stylesheet" href= "css/bootstrap.min.css">
 <link rel="stylesheet" href="rotc.css">
+        <div id= "mydiv" name="mydiv" class="inline">
+     <ul>
+<li><a class="active" href=requests.php>Pending Requests</a></li>
+<li><a  href=login_success.php>Admin Home</a></li>
+  <li><a href=rotc.php>Logout</a></li>
+</ul>
+     </div> 
 <h1>Pending Requests</h1>
     <body>  
-
-    <form method="post" action="rotc.php">
-        <button type="submit" >Home</button>
-        <button type="submit" >Log Out</button>
-    </form>
-    <form method="post" action="login_success.php">
-        <button type="submit" >Admin Home</button>
-    </form>
      <form method="post" action="">
          Enter Request ID to resolve request:
-         <input type="text" name="requestid" value="">
+         <input type="text" name="requestid" value="" style="margin-top: 100px;">
         <input type="submit" name="resolverequest" value="Resolve Request">
-        <input type="submit" name="refresh" value="refresh equipment table"/>
+        <input style="margin-top: 100px;" type="submit" name="refresh" value="refresh equipment table"/>
 
     </form>
 <?php

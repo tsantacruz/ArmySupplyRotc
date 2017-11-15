@@ -1,12 +1,12 @@
 <!DOCTYPE html>
+<link rel="stylesheet" href= "css/bootstrap.min.css">
 <link rel="stylesheet" href="rotc.css">
 <html>
     <body>
-        <table width="300" border="0" align="center" cellpadding="0" cellspacing="1" bgcolor="#a0a0c5">
         <tr>
-        <form name="form1" method="post" action="checklogin.php">
+        <form name="form1" method="post" action="checklogin.php" style="margin-top: 100px;">
         <td>
-        <table width="100%" border="0" cellpadding="3" cellspacing="1" bgcolor="#a0a0c5">
+        <table width="100%" border="0" cellpadding="3" cellspacing="1" bgcolor="#E6E2FF">
         <tr>
         <td colspan="3"><strong>Admin Login </strong></td>
         </tr>
@@ -28,6 +28,7 @@
         </table>
         </td>
         </form>
+        
         </tr>
     </body>
 </html>

@@ -1,20 +1,24 @@
-<html>
+<link rel="stylesheet" href= "css/bootstrap.min.css">
+<link rel="stylesheet" href="rotc.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <head><title>supply</title></head>
-<link rel="stylesheet" href="rotc.css">
-    <form method="post" action="main_login.php">
-    <input type="submit" name="Login" value = "Admin"/>
-    </form>
-<form method="post" action="request_form.php">
-    <input type="submit" name="Request" value = "Request Equipment" />
-    </form>
+ <div id= "mydiv" name="mydiv" class="inline">
+     <ul>
+  <li><a class="active" href="#home">Home</a></li>
+  <li><a href=request_form.php>Submit Request</a></li>
+  <li><a href=main_login.php>Admin Login</a></li>
+
+</ul>
+     </div> 
 <h1>Seton Hall Army ROTC</h1>
-<body>  
-<form method="post" action="">
+<body> 
+  
+<form method="post" action="" style="margin-top: 100px;">
     Equipment Search: 
     <input type="text" name="something" value="" placeholder="EquipmentID.."/> 
-    <input  type="submit" name="submitavailable" value = "Search"/>
+    <input  type="submit" name="submitavailable" value = "Search" />
     </form>
+
 
 
 <?php

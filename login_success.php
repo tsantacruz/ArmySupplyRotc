@@ -1,20 +1,24 @@
+<link rel="stylesheet" href= "css/bootstrap.min.css">
 <link rel="stylesheet" href="rotc.css">
 <html>
 <body>
-    <form method="post" action="rotc.php">
-        <button type="submit" >Home</button>
-        <button type="submit" >Log Out</button>
-    </form>
-    <form method="post" action="requests.php">
-        <button type="submit" >See Pending Requests</button>
-    </form>
-<header>Welcome Admin</header>
+    <div id= "mydiv" name="mydiv" class="inline">
+     <ul>
+<li><a class="active" href=main_login.php>Admin Home</a></li>
+  <li><a href=requests.php>Pending Requests</a></li>
+  <li><a href=rotc.php>Home</a></li>
+
+
+</ul>
+     </div> 
+
+<h1>Welcome Admin</h1>
     <p>Enter Equipment ID to Change Equipment Availability</p>
     
     <form method="post" action="">
     <input type="text" name="something" value="" /> 
-    <input  type="submit" name="changetoavailable" value="Increase Quantity"/>
-    <input type="submit" name="changetounavailable" value="Decrease Quantity"/>
+    <input  type="submit" name="changetoavailable" value="Return"/>
+    <input type="submit" name="changetounavailable" value="Checked Out"/>
     </form>
     
     <form method="post" action="">
