@@ -43,7 +43,7 @@ $showtableresult= mysqli_query($link, $showtablequery)
 <TH>First Name</TH>
 <TH>Last Name</TH>
 <TH>Email</TH>
-<TH>Equipment ID</TH>
+<TH>Equipment Name</TH>
 <TH>MS Level</TH>
 <TH>Message</TH>
 <TH>Request ID</TH>
