@@ -1,35 +1,27 @@
 <!DOCTYPE html>
 <link rel="stylesheet" href= "css/bootstrap.min.css">
-<link rel="stylesheet" href="rotc.css">
+<link rel="stylesheet" href="rotcc.css">
 <html>
     <body>
-        <tr>
-        <form name="form1" method="post" action="checklogin.php" style="margin-top: 100px;">
-        <td>
-        <table width="100%" border="0" cellpadding="3" cellspacing="1" bgcolor="#E6E2FF">
-        <tr>
-        <td colspan="3"><strong>Admin Login </strong></td>
-        </tr>
-        <tr>
-        <td width="78">Username</td>
-        <td width="6">:</td>
-        <td width="294"><input name="myusername" type="text" id="myusername" placeholder="Your username.."></td>
-        </tr>
-        <tr>
-        <td>Password</td>
-        <td>:</td>
-        <td><input name="mypassword" type="password" id="mypassword" placeholder="Your password.."></td>
-        </tr>
-        <tr>
-        <td>&nbsp;</td>
-        <td>&nbsp;</td>
-        <td><input type="submit" name="Submit" value="Login"></td>
-        </tr>
-        </table>
-        </td>
-        </form>
-        
-        </tr>
-    </body>
+    
+    		<div class="panel panel-default">
+			  	<div class="panel-heading">
+			    	<h3 class="panel-title">Please sign in</h3>
+			 	</div>
+			  	<div class="panel-body">
+			    	<form accept-charset="UTF-8" role="form" method="post" action="checklogin.php">
+                    <fieldset >
+			    	  	<div class="form-group">
+			    		    <input class="form-control" placeholder="Username" name="myusername" id="myusername"type="text">
+			    		</div>
+			    		<div class="form-group">
+			    			<input class="form-control" placeholder="Password" name="mypassword" type="password" value="" id="mypassword">
+                        </div>
+			    		<input class="btn btn-lg btn-success btn-block" type="submit" value="Login" style="width:200px; margin:auto;">
+			    	</fieldset>
+			      	</form>
+			    </div>
+			</div>
+        </body>
 </html>
     

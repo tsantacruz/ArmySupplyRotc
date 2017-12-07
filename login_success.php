@@ -1,5 +1,5 @@
 <link rel="stylesheet" href= "css/bootstrap.min.css">
-<link rel="stylesheet" href="rotc.css">
+<link rel="stylesheet" href="rotcc.css">
 <html>
 <body>
     <div id= "mydiv" name="mydiv" class="inline">
@@ -117,7 +117,8 @@ $equipmentID = $_POST['selected'];
 $showtablequery="SELECT * FROM rotcarmy";
 $showtableresult= mysqli_query($link, $showtablequery) 
     or trigger_error($db->error); ?>
-    <TABLE>
+ <div style="overflow: scroll; height: 500px;">   
+<TABLE class="table">
 <TR>
 <TH>ID</TH>
 <TH>Name</TH>
@@ -134,6 +135,7 @@ $array = array('equipment_id', 'equipment_name', 'availability');
     echo "</TR>";
 } ?>
         </TABLE>
+    </div>
 
   
 <?php

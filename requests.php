@@ -1,7 +1,7 @@
 <html>
 <head><title>supply</title></head>
     <link rel="stylesheet" href= "css/bootstrap.min.css">
-<link rel="stylesheet" href="rotc.css">
+<link rel="stylesheet" href="rotcc.css">
         <div id= "mydiv" name="mydiv" class="inline">
      <ul>
 <li><a class="active" href=requests.php>Pending Requests</a></li>
@@ -38,7 +38,8 @@ $showtableresult= mysqli_query($link, $showtablequery)
                         or trigger_error($db->error); 
                 }
         ?>
-    <TABLE>
+ <div style="overflow: scroll; height: 500px;">   
+<TABLE class="table">
 <TR>
 <TH>First Name</TH>
 <TH>Last Name</TH>
@@ -59,5 +60,6 @@ $array = array('firstname', 'lastname', 'email','equipment','mslevel','message(o
     echo "</TR>";
 } ?>
         </TABLE>
+        </div>
     </body>
 </html>

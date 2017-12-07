@@ -1,5 +1,5 @@
 <link rel="stylesheet" href= "css/bootstrap.min.css">
-<link rel="stylesheet" href="rotc.css">
+<link rel="stylesheet" href="rotcc.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <head><title>supply</title></head>
  <div id= "mydiv" name="mydiv" class="inline">
@@ -43,7 +43,8 @@ $result = mysqli_query($link, $query)
     if(isset($_POST['submitavailable'])) {
        // echo 'You entered ', htmlspecialchars($_POST['somethin']);
 //var_dump($result);    ?>
-<TABLE>
+ <div style="overflow: scroll; height: 500px;">   
+<TABLE class="table">
 <TR>
 <TH>ID</TH>
 <TH>Name</TH>
@@ -64,5 +65,6 @@ $array = array('equipment_id', 'equipment_name', 'availability');
 $db->close();
  ?> 
 </TABLE>
+    </div>
  </body>
 </html>
