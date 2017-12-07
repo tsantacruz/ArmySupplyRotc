@@ -14,9 +14,7 @@
      <form method="post" action="">
          Enter Request ID to resolve request:
          <input type="text" name="requestid" value="" style="margin-top: 100px;">
-        <input type="submit" name="resolverequest" value="Resolve Request">
-        <input style="margin-top: 100px;" type="submit" name="refresh" value="refresh equipment table"/>
-
+        <input type="submit" name="resolverequest" value="Resolve Request" class="btn btn-lg btn-success btn-block"  style="width:250px; margin:auto;">
     </form>
 <?php
 $requestID = $_POST['requestid']; 
@@ -36,6 +34,10 @@ $showtableresult= mysqli_query($link, $showtablequery)
                         WHERE requestid='$requestID';";
                     $updateRequestResult= mysqli_query($link, $updateRequestQuery) 
                         or trigger_error($db->error); 
+                    $resetAutoIncrementQuery="ALTER TABLE requests AUTO_INCREMENT = 0";
+                    $resetAutoIncrementResult= mysqli_query($link, $resetAutoIncrementQuery) 
+                        or trigger_error($db->error); 
+                    echo "<meta http-equiv=refresh content=\"0; URL=requests.php\">";
                 }
         ?>
  <div style="overflow: scroll; height: 500px;">   

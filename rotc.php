@@ -15,8 +15,8 @@
   
 <form method="post" action="" style="margin-top: 100px;">
     Equipment Search: 
-    <input type="text" name="something" value="" placeholder="EquipmentID.."/> 
-    <input  type="submit" name="submitavailable" value = "Search" />
+    <input type="text" name="something" value="" placeholder="EquipmentID.."/> <br><br>
+    <input  class="btn btn-lg btn-success btn-block"  style="width:120px; margin:auto;" type="submit" name="submitavailable" value = "Search" />
     </form>
 
 
