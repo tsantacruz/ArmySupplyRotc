@@ -6,7 +6,7 @@
      <ul>
   <li><a class="active" href="#home">Home</a></li>
   <li><a href=request_form.php>Submit Request</a></li>
-  <li><a href=main_login.php>Admin Login</a></li>
+  <li><a href=main_login.html>Admin Login</a></li>
 
 </ul>
      </div> 

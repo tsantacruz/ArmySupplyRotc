@@ -16,8 +16,8 @@ $conn = mysqli_real_connect(
    $port
 );
 $db_selected = mysqli_select_db(
-   $db, 
-   $link
+   $link, 
+   $db
 );
 
 ?>

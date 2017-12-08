@@ -8,7 +8,7 @@ require("databaseconnect.php");
      <div id= "mydiv" name="mydiv" class="inline">
      <ul>
   <li><a class="active" href="#home">Submit Request</a></li>
-  <li><a href=main_login.php>Admin Login</a></li>
+  <li><a href=main_login.html>Admin Login</a></li>
   <li><a href=rotc.php>Home</a></li>
 
 </ul>

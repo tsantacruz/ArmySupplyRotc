@@ -1,3 +1,16 @@
+<?php
+session_start();
+if (!isset($_SESSION['sesh_user']) || $_SESSION['sesh_user'] === '') { 
+
+?>
+
+<script text="text/javascript">
+window.location.href = "main_login.html";
+</script>
+<?php
+}
+
+?>
 <html>
 <head><title>supply</title></head>
     <link rel="stylesheet" href= "css/bootstrap.min.css">
@@ -6,7 +19,7 @@
      <ul>
 <li><a class="active" href=requests.php>Pending Requests</a></li>
 <li><a  href=login_success.php>Admin Home</a></li>
-  <li><a href=rotc.php>Logout</a></li>
+ <li><a href=logout.php>Logout</a></li>
 </ul>
      </div> 
     <div style="float: auto;"><IMG SRC="university-logo-desktop.png"></div>
