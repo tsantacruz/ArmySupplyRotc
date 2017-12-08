@@ -9,9 +9,10 @@
   <li><a href=rotc.php>Logout</a></li>
 </ul>
      </div> 
-<h1>Pending Requests</h1>
+    <div style="float: auto;"><IMG SRC="university-logo-desktop.png"></div>
+<h2>Pending Requests</h2>
     <body>  
-     <form method="post" action="">
+     <form method="post" action="" style="margin-left:200px;">
          Enter Request ID to resolve request:
          <input type="text" name="requestid" value="" style="margin-top: 100px;">
         <input type="submit" name="resolverequest" value="Resolve Request" class="btn btn-lg btn-success btn-block"  style="width:250px; margin:auto;">

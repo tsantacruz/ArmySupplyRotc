@@ -3,10 +3,19 @@
 <link rel="stylesheet" href="rotcc.css">
 <html>
     <body>
-        
-    		<div class="panel panel-default">
-			  	<div class="panel-heading"><br><br>
-			    	<h2 class="panel-title">Admin Login</h2><br><br>
+ <div id= "mydiv" name="mydiv" class="inline">
+     <ul>
+  <li><a class="active" href="#home">Admin Login</a></li>
+  <li><a href=request_form.php>Submit Request</a></li>
+  <li><a href=rotc.php>Home</a></li>
+
+</ul>
+     </div> 
+<div style="float: auto; style="margin-top: 100px;margin-left:200px;""><IMG SRC="university-logo-desktop.png"></div>
+
+    		<div class="panel panel-default" style="margin-left:200px;">
+			  	<div class="panel-heading"><br>
+			    	<h2 class="panel-title">Admin Login</h2>
 			 	</div>
 			  	<div class="panel-body">
 			    	<form accept-charset="UTF-8" role="form" method="post" action="checklogin.php">

@@ -15,8 +15,8 @@
 
 </ul>
      </div> 
-
-<h1>Welcome Admin</h1>
+<div style="float: auto;"><IMG SRC="university-logo-desktop.png"></div>
+<br>
     <form method="post" action="">
 <select name = "selected"/>
      <option value="Select">Select Equipment</option>
@@ -30,8 +30,10 @@
             echo "</select>"; 
             ?>
         <br>
-    <input  type="submit" name="changetoavailable" value="Return" class="btn btn-lg btn-success btn-block"  style="width:120px; margin:auto;"/><br>
+        <div class="row">
+    <input  type="submit" name="changetoavailable" value="Return" class="btn btn-lg btn-success btn-block"  style="width:120px; margin:auto;"/>
     <input type="submit" name="changetounavailable" value="Checked Out" class="btn btn-lg btn-success btn-block"  style="width:200px; margin:auto; "/>
+            </div>
     </form>
     
 

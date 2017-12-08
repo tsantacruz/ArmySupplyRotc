@@ -1,20 +1,27 @@
 html,body {
     max-width: 100%;
     overflow-x: hidden;
-    background-color: #E6E2FF;
+    background-color: #0B24FD;
     text-align: center;
     font-size: 25px;
-    color: black;
+    color: white;
     font-family: Baskerville, "Baskerville Old Face", "Goudy Old Style", Garamond, "Times New Roman", serif;
 }
 header {
     font-size: 230%;
+        color: black;
+
+}
+h1{
+    color:white;
+    font-weight:lighter;
 }
 table {
   border-collapse: separate;
   border-spacing: 1px;
     width:70%; 
     background-color: #c2c2d6;
+    color:black;
 
 }
 
@@ -23,7 +30,7 @@ th,td {
   background-color: white;
 }
 input[type=text] {
-    padding:5px; 
+    padding:1px; 
     border:2px solid #ccc; 
     -webkit-border-radius: 5px;
     border-radius: 5px;
@@ -34,16 +41,16 @@ input[type=text]:focus {
 }
 
 input[type=submit] {
-    padding:5px 15px; 
-    background:#c2c2d6; 
+    padding:0px 0px; 
+    background:#0c6bd3; 
     border:0 none;
     cursor:pointer;
     -webkit-border-radius: 5px;
     border-radius: 5px; 
 }
 button[type=submit] {
-    padding:5px 15px; 
-    background:#c2c2d6; 
+    padding:0px 15px; 
+    background:#0c6bd3; 
     border:0 none;
     cursor:pointer;
     -webkit-border-radius: 5px;
@@ -65,7 +72,7 @@ li a {
 }
 
 li a.active {
-    background-color: #5D46D8;
+    background-color: #0c6bd3;
     color: white;
 }
 
@@ -88,4 +95,8 @@ div.inline { float:left; }
 
 
 
+img {
+    opacity: 0.5;
+    filter: alpha(opacity=50); /* For IE8 and earlier */
+}
 

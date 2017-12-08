@@ -16,10 +16,11 @@
 </ul>
      </div> 
 
+<div style="float: auto;"><IMG SRC="university-logo-desktop.png"></div>
 
     <h6>Change availability</h6 >
 
-    <form method="post" action="">
+    <form method="post" action=""style="margin-left:200px;">
 <select name = "selected"/>
   <option value="Select">Select Equipment</option>
             <?php
@@ -33,7 +34,9 @@
             ?><br><br>
     <input  type="text" name="availability" value="" placeholder="Quantity..."style="display:block; margin:auto;"/> <br>
     <input type="submit" name="update" value="Update" class="btn btn-lg btn-success btn-block"  style="width:200px; margin:auto;"/><br><br>
+        
     </form>
+    
     
     <h6 style="margin-left:200px;">Add Equipment Entry</h6>
     <form method="post" action="" style="margin-left:200px;">
