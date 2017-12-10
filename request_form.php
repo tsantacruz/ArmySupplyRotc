@@ -5,18 +5,18 @@ require("databaseconnect.php");
 ?>
 <html>
 <body>
-     <div id= "mydiv" name="mydiv" class="inline" >
+     <div id= "mydiv" name="mydiv" class="inline">
      <ul>
   <li><a class="active" href="#home">Submit Request</a></li>
-  <li><a href=main_login.html>Admin Login</a></li>
+  <li><a href=main_login.php>Admin Login</a></li>
   <li><a href=rotc.php>Home</a></li>
 
 </ul>
      </div> 
     <form method="post" action="rotc.php">
-        <div style="float: auto;"><IMG SRC="university-logo-desktop.png"></IMG>
+        <div style="float: auto;"><IMG SRC="university-logo-desktop.png"></div>
         <button type="submit" class="btn btn-lg btn-success btn-block"  style="width:110px; margin:auto;">Home</button>
-        </div>
+    </form>
 <form method="post" action=""style="margin-left:200px;">
   First name:<br>
   <input type="text" name="firstname" value=""placeholder="First Name.."><br>
@@ -78,10 +78,9 @@ if(isset($_POST['submitrequest'])){
     // You can also use header('Location: thank_you.php'); to redirect to another page.
     // You cannot use header and echo together. It's one or the other.
     
-
 ?>
         
 
 
-    </form>
-    </body>
+</body>
+</html>

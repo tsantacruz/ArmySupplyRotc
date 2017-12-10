@@ -1,7 +1,13 @@
 html,body {
+    height:100%;
     max-width: 100%;
     overflow-x: hidden;
     background-color: #0B24FD;
+    background: red; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(blue, #151B54); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(blue,#151B54 ); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(blue, #151B54); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(blue, #151B54);
     text-align: center;
     font-size: 25px;
     color: white;
@@ -94,9 +100,4 @@ div.inline { float:left; }
 }
 
 
-
-img {
-    opacity: 0.5;
-    filter: alpha(opacity=50); /* For IE8 and earlier */
-}
 
