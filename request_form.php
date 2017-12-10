@@ -5,7 +5,7 @@ require("databaseconnect.php");
 ?>
 <html>
 <body>
-     <div id= "mydiv" name="mydiv" class="inline">
+     <div id= "mydiv" name="mydiv" class="inline" >
      <ul>
   <li><a class="active" href="#home">Submit Request</a></li>
   <li><a href=main_login.html>Admin Login</a></li>
@@ -14,9 +14,9 @@ require("databaseconnect.php");
 </ul>
      </div> 
     <form method="post" action="rotc.php">
-        <div style="float: auto;"><IMG SRC="university-logo-desktop.png"></div>
+        <div style="float: auto;"><IMG SRC="university-logo-desktop.png"></IMG>
         <button type="submit" class="btn btn-lg btn-success btn-block"  style="width:110px; margin:auto;">Home</button>
-    </form>
+        </div>
 <form method="post" action=""style="margin-left:200px;">
   First name:<br>
   <input type="text" name="firstname" value=""placeholder="First Name.."><br>
@@ -83,5 +83,5 @@ if(isset($_POST['submitrequest'])){
         
 
 
-</body>
-</html>
+    </form>
+    </body>

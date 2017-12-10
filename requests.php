@@ -22,7 +22,7 @@ window.location.href = "main_login.html";
  <li><a href=logout.php>Logout</a></li>
 </ul>
      </div> 
-    <div style="float: auto;"><IMG SRC="university-logo-desktop.png"></div>
+    <div style="float: auto;"><IMG SRC="university-logo-desktop.png"></IMG>
 <h2>Pending Requests</h2>
     <body>  
      <form method="post" action="" style="margin-left:200px;">

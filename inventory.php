@@ -147,6 +147,5 @@ $db->close();
  ?> 
         
 
-
-</body>
-</html>
+    </div>
+    </body>
