@@ -9,11 +9,11 @@ require("databaseconnect.php");
      <ul>
   <li><a class="active" href="#home">Submit Request</a></li>
   <li><a href=main_login.php>Admin Login</a></li>
-  <li><a href=rotc.php>Home</a></li>
+  <li><a href=./>Home</a></li>
 
 </ul>
      </div> 
-    <form method="post" action="rotc.php">
+    <form method="post" action="./">
         <div style="float: auto;"><IMG SRC="university-logo-desktop.png"></div>
         <button type="submit" class="btn btn-lg btn-success btn-block"  style="width:110px; margin:auto;">Home</button>
     </form>
