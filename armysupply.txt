@@ -74,3 +74,4 @@
 ('74', 'Rank Brass', 150),
 ('75', 'Rank Subdude', 150),
 ('76', 'ROTC Brass', 150),
+('77', 'New Cadet Gear', 30),
